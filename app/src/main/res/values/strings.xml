@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BooksApi</string>
+    <string name="books_title">BooksApp</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort by:</string>
+    <string name="book_image">Book image</string>
+</resources>
