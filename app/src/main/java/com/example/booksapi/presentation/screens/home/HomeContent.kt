@@ -34,12 +34,18 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.booksapi.R
 import com.example.booksapi.presentation.models.Books
+import com.example.booksapi.presentation.vm.HomeVM
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun HomeContent(
     listOfBooks: ArrayList<Books>,
-    onBookClicked: (Books) -> Unit
+    onBookClicked: (Books) -> Unit,
 ) {
+    val vm: HomeVM = koinViewModel()
+   /* Log.e(
+        "ololo", "HomeContent: " + vm.getAllBooks("book", 5)
+    )*/
     Column(
         modifier = Modifier
             .fillMaxSize()
