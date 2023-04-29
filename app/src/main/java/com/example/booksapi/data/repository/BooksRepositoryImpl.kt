@@ -14,7 +14,7 @@ class BooksRepositoryImpl(
         query: String,
         maxResult: Int
     ): Flow<Resource<List<BooksLibrary>>> = doReguest {
-        bookService.bookSearch(query, maxResult).map { it.toDomain() }
+        listOf(bookService.bookSearch(query, maxResult).toDomain())
     }
 }
 

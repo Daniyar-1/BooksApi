@@ -1,9 +1,10 @@
 package com.example.booksapi.domain.ui_state
 
+import com.example.booksapi.domain.models.BooksLibrary
 
-sealed class BooksUiState<T>{
-    class Loading<T>: BooksUiState<T>()
-    class Success<T>(val data: T): BooksUiState<T>()
-    class Error<T>(val message: String): BooksUiState<T>()
-    class Empty<T>: BooksUiState<T>()
+
+sealed class BooksUiState {
+    object Loading : BooksUiState()
+    class Success(val data: List<BooksLibrary>) : BooksUiState()
+    object Error : BooksUiState()
 }

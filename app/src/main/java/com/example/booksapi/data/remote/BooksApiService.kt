@@ -9,5 +9,5 @@ interface BooksApiService {
     suspend fun bookSearch(
         @Query("q") searchQuery: String,
         @Query("maxResults") maxResults: Int
-    ): List<BooksLibraryDto>
+    ): BooksLibraryDto
 }
